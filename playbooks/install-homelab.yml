@@ -1,0 +1,9 @@
+- name: Install Docker on Ubuntu
+  hosts: "homelab"
+  remote_user: andrekirst  # Change remote user to your sudo user!
+  become: true
+  tasks:
+    - name: Install Docker
+      community.general.snap:
+        name:
+          - docker

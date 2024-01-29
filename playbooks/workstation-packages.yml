@@ -1,0 +1,7 @@
+- hosts: "workstations"
+  become: yes
+  tasks:
+    - name: Install OnlyOffice
+      community.general.snap:
+        name:
+          - onlyoffice-desktopeditors

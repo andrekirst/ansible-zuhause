@@ -1,0 +1,11 @@
+- hosts: "printers"
+  become: yes
+  tasks:
+    - name: Install cups
+      apt:
+        name: cups
+        state: present
+        update_cache: true
+    - name: Enable Remote Administration and Share Printers
+      ansible.builtin.shell:
+        cmd: cupsctl --remote-admin --share-printers

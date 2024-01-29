@@ -1,0 +1,9 @@
+[printers]
+cups
+
+[homelab]
+rp0
+raspberrypi1
+
+[workstations]
+workstation
